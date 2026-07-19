@@ -8,16 +8,16 @@ export default function HomePage() {
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div className="space-y-6">
             <span className="inline-flex rounded-full bg-primary/10 px-4 py-1 text-sm font-semibold text-primary">
-              Design + Development
+              Front-End Developer
             </span>
             <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-              Elegant portfolio experiences with thoughtful UI and fast
-              performance.
+              I build modern web experiences that are clean, fast, and made to
+              leave a lasting impression.
             </h1>
             <p className="max-w-2xl text-lg leading-8 text-muted">
-              I build responsive websites and applications that look great on
-              every screen, with a polished light/dark theme and strong visual
-              hierarchy.
+              I’m Usman, a front-end developer focused on crafting polished
+              interfaces, thoughtful user journeys, and responsive websites that
+              reflect personality and purpose.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
@@ -36,26 +36,31 @@ export default function HomePage() {
           </div>
           <div className="rounded-[2rem] border border-border/80 bg-surface p-8 shadow-[0_30px_80px_rgba(79,70,229,0.08)] dark:border-border/40 dark:bg-surface dark:shadow-[0_30px_80px_rgba(99,102,241,0.18)]">
             <div className="space-y-6">
-              <div className="flex items-center justify-between gap-4 rounded-3xl bg-primary/5 p-5 text-sm text-primary dark:bg-primary/10">
-                <span className="font-semibold">Primary focus</span>
-                <span>UI design, portfolio sites, product pages</span>
+              <div className="rounded-3xl border border-primary/20 bg-primary/5 p-5 text-sm text-primary shadow-sm dark:border-primary/20 dark:bg-primary/10">
+                <p className="font-semibold">Primary focus</p>
+                <p className="mt-2 leading-7 text-primary/80">
+                  Crafting refined portfolio websites, thoughtful UI systems,
+                  and modern digital experiences that feel both elegant and
+                  highly functional.
+                </p>
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="rounded-3xl border border-border/70 bg-surface p-5 text-sm shadow-sm dark:border-border/70 dark:bg-surface-muted">
                   <p className="font-semibold text-foreground">
-                    Responsive layouts
+                    User-first design
                   </p>
                   <p className="mt-2 text-sm text-muted">
-                    Content that adapts beautifully across mobile, tablet, and
-                    desktop.
+                    Clean layouts, intuitive navigation, and visual storytelling
+                    that guide the visitor naturally.
                   </p>
                 </div>
                 <div className="rounded-3xl border border-border/70 bg-surface p-5 text-sm shadow-sm dark:border-border/70 dark:bg-surface-muted">
                   <p className="font-semibold text-foreground">
-                    Dark & light mode
+                    Performance-driven builds
                   </p>
                   <p className="mt-2 text-sm text-muted">
-                    A polished theme toggle for fast mood switching.
+                    Responsive, fast-loading experiences designed to perform
+                    beautifully on every device.
                   </p>
                 </div>
               </div>
