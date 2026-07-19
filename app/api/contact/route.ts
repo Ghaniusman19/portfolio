@@ -13,6 +13,7 @@ type ContactMessage = {
 const resendApiKey = process.env.RESEND_API_KEY;
 const resend = resendApiKey ? new Resend(resendApiKey) : null;
 const fromEmail = process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
+const toEmail = process.env.CONTACT_TO_EMAIL || "usmighani1921@gmail.com";
 const messagesFilePath = process.env.VERCEL
   ? path.join("/tmp", "contact-messages.json")
   : path.join(process.cwd(), "data", "contact-messages.json");
@@ -76,7 +77,7 @@ export async function POST(request: Request) {
 
     await resend.emails.send({
       from: fromEmail,
-      to: ["usman.ghani@jjtestsite.us"],
+      to: [toEmail],
       subject: `New portfolio message from ${trimmedName}`,
       html: `<p><strong>Name:</strong> ${trimmedName}</p><p><strong>Message:</strong><br />${trimmedMessage.replace(/\n/g, "<br />")}</p>`,
     });
@@ -87,8 +88,11 @@ export async function POST(request: Request) {
     );
   } catch (error) {
     console.error("Contact submission failed", error);
+    const message =
+      error instanceof Error ? error.message : "Failed to save message.";
+
     return NextResponse.json(
-      { success: false, error: "Failed to save message." },
+      { success: false, error: message },
       { status: 500 },
     );
   }
