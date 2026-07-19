@@ -1,18 +1,21 @@
 const projects = [
   {
-    title: "Portfolio Redesign",
-    description: "A responsive portfolio site with dark/light theming, animated cards, and a clean presentation.",
-    badge: "UI / Next.js",
+    title: "FiveLumens",
+    description:
+      "A modern AI coaching platform built with Next.js, optimized for performance, responsive layouts, and polished user experience.",
+    badge: "Next.js",
+    link: "https://fivelumens.ai/",
+    role: "Next.js / UI / Performance",
+    image: "fivelumens_img.png",
   },
   {
-    title: "Landing Page Concept",
-    description: "A modern landing page designed to convert visitors with bold visuals and clear calls to action.",
-    badge: "Design / Branding",
-  },
-  {
-    title: "Web App Dashboard",
-    description: "A crisp dashboard layout with data visualizations, quick actions, and an accessible design system.",
-    badge: "Product / React",
+    title: "Piqosity",
+    description:
+      "A personalized learning and test-prep platform built with Angular, focused on adaptive lessons, intuitive navigation, and student progress tracking.",
+    badge: "Angular",
+    link: "https://www.piqosity.com/",
+    role: "Angular / Education / UX",
+    image: "piqosity_img.png",
   },
 ];
 
@@ -25,23 +28,52 @@ export default function ProjectsPage() {
             Featured Work
           </span>
           <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-            Selected projects crafted for performance and polish.
+            Two real-world projects showcasing clean design and scalable UI.
           </h1>
           <p className="max-w-2xl text-lg leading-8 text-muted">
-            Explore a few examples of the design systems, portfolio pages, and product interfaces I build.
+            Explore live projects that demonstrate my front-end work with
+            Next.js and Angular, including real production websites and polished
+            user experiences.
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2">
           {projects.map((project) => (
             <article
               key={project.title}
-              className="rounded-[2rem] border border-border/80 bg-surface p-6 shadow-[0_20px_60px_rgba(79,70,229,0.08)] transition hover:-translate-y-1 hover:shadow-[0_30px_80px_rgba(79,70,229,0.12)] dark:border-border/40 dark:bg-surface dark:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
+              className="group rounded-[2rem] border border-border/80 bg-surface p-6 shadow-[0_20px_60px_rgba(79,70,229,0.08)] transition hover:-translate-y-1 hover:shadow-[0_30px_80px_rgba(79,70,229,0.12)] dark:border-border/40 dark:bg-surface dark:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
             >
-              <div className="mb-4 inline-flex rounded-full bg-surface-muted px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-muted dark:bg-surface dark:text-muted">
-                {project.badge}
+              <div className="mb-5 overflow-hidden rounded-3xl bg-surface-muted">
+                <img
+                  src={`/projects/${project.image}`}
+                  alt={project.title}
+                  className="h-44 w-full object-cover"
+                />
               </div>
-              <h2 className="text-2xl font-semibold text-foreground">{project.title}</h2>
-              <p className="mt-3 text-sm leading-7 text-muted">{project.description}</p>
+              <div className="mb-4 flex items-center justify-between">
+                <span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                  {project.badge}
+                </span>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center rounded-full bg-primary px-3 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-primary/90"
+                >
+                  Visit site
+                </a>
+              </div>
+              <h2 className="text-2xl font-semibold text-foreground">
+                {project.title}
+              </h2>
+              <p className="mt-3 text-sm leading-7 text-muted">
+                {project.description}
+              </p>
+              <div className="mt-5 flex flex-wrap items-center gap-3">
+                <span className="rounded-full border border-border/80 bg-surface px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-muted dark:border-border/40 dark:bg-surface-muted">
+                  {project.role}
+                </span>
+                <span className="text-xs text-muted">Live website</span>
+              </div>
             </article>
           ))}
         </div>
