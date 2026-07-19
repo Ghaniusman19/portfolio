@@ -13,11 +13,9 @@ type ContactMessage = {
 const resendApiKey = process.env.RESEND_API_KEY;
 const resend = resendApiKey ? new Resend(resendApiKey) : null;
 const fromEmail = process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
-const messagesFilePath = path.join(
-  process.cwd(),
-  "data",
-  "contact-messages.json",
-);
+const messagesFilePath = process.env.VERCEL
+  ? path.join("/tmp", "contact-messages.json")
+  : path.join(process.cwd(), "data", "contact-messages.json");
 
 async function readMessages(): Promise<ContactMessage[]> {
   try {
