@@ -72,26 +72,39 @@ export default function ContactPage() {
             </p>
             <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
               <div>
-                <label className="mb-2 block text-sm font-medium text-foreground">
+                <label
+                  htmlFor="contact-name"
+                  className="mb-2 block text-sm font-medium text-foreground"
+                >
                   Name
                 </label>
                 <input
+                  id="contact-name"
                   type="text"
                   value={name}
                   onChange={(event) => setName(event.target.value)}
                   placeholder="Your name"
+                  autoComplete="name"
+                  maxLength={100}
+                  required
                   className="w-full rounded-2xl border border-border bg-surface-muted px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
                 />
               </div>
               <div>
-                <label className="mb-2 block text-sm font-medium text-foreground">
+                <label
+                  htmlFor="contact-message"
+                  className="mb-2 block text-sm font-medium text-foreground"
+                >
                   Message
                 </label>
                 <textarea
+                  id="contact-message"
                   rows={4}
                   value={message}
                   onChange={(event) => setMessage(event.target.value)}
                   placeholder="Tell me about your project..."
+                  maxLength={5000}
+                  required
                   className="w-full rounded-2xl border border-border bg-surface-muted px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
                 />
               </div>
@@ -102,7 +115,15 @@ export default function ContactPage() {
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </button>
-              {status ? <p className="text-sm text-muted">{status}</p> : null}
+              {status ? (
+                <p
+                  className="text-sm text-muted"
+                  role="status"
+                  aria-live="polite"
+                >
+                  {status}
+                </p>
+              ) : null}
             </form>
             <div className="mt-8 border-t border-border/70 pt-6 text-sm text-foreground">
               <p>

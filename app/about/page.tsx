@@ -24,22 +24,39 @@ export default function AboutPage() {
                   What I bring to a project
                 </h2>
                 <p className="mt-3 text-sm leading-7 text-muted">
-                  I build polished websites and portfolio experiences that
-                  combine aesthetics, functionality, and modern development
-                  practices.
+                  With 1–2 years of front-end experience, I build polished
+                  business websites and education platforms that combine
+                  thoughtful design, reliable functionality, and modern
+                  development practices.
                 </p>
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="rounded-3xl border border-border/70 bg-surface p-4 text-sm text-foreground dark:border-border/70 dark:bg-surface-muted">
-                  <p className="font-semibold">Visual Design</p>
+                  <p className="font-semibold">React & Next.js</p>
                   <p className="mt-2 text-muted">
-                    Thoughtful layouts, modern typography, and balanced spacing.
+                    Component-driven interfaces with responsive layouts,
+                    routing, and production-ready rendering.
                   </p>
                 </div>
                 <div className="rounded-3xl border border-border/70 bg-surface p-4 text-sm text-foreground dark:border-border/70 dark:bg-surface-muted">
-                  <p className="font-semibold">Front-End Development</p>
+                  <p className="font-semibold">Angular Development</p>
                   <p className="mt-2 text-muted">
-                    Clean implementation with React, Next.js, and responsive UI.
+                    Structured front-end applications designed for clear
+                    navigation and scalable user experiences.
+                  </p>
+                </div>
+                <div className="rounded-3xl border border-border/70 bg-surface p-4 text-sm text-foreground dark:border-border/70 dark:bg-surface-muted">
+                  <p className="font-semibold">API Integration</p>
+                  <p className="mt-2 text-muted">
+                    Connecting interfaces to useful data and services with
+                    dependable loading, error, and response states.
+                  </p>
+                </div>
+                <div className="rounded-3xl border border-border/70 bg-surface p-4 text-sm text-foreground dark:border-border/70 dark:bg-surface-muted">
+                  <p className="font-semibold">Responsive Product Thinking</p>
+                  <p className="mt-2 text-muted">
+                    Translating real business and learning goals into clear,
+                    accessible experiences across every screen size.
                   </p>
                 </div>
               </div>

@@ -2,7 +2,7 @@ const projects = [
   {
     title: "FiveLumens",
     description:
-      "A modern AI coaching platform built with Next.js, optimized for performance, responsive layouts, and polished user experience.",
+      "A modern AI coaching platform built with Next.js. I focused on translating a complex product into a clear, responsive interface with polished interactions and a performance-minded foundation.",
     badge: "Next.js",
     link: "https://fivelumens.ai/",
     role: "Next.js / UI / Performance",
@@ -11,7 +11,7 @@ const projects = [
   {
     title: "Piqosity",
     description:
-      "A personalized learning and test-prep platform built with Angular, focused on adaptive lessons, intuitive navigation, and student progress tracking.",
+      "A personalized learning and test-prep platform built with Angular. The experience brings together adaptive lessons, intuitive navigation, and student progress tracking in a structured education product.",
     badge: "Angular",
     link: "https://www.piqosity.com/",
     role: "Angular / Education / UX",
@@ -31,9 +31,10 @@ export default function ProjectsPage() {
             Two real-world projects showcasing clean design and scalable UI.
           </h1>
           <p className="max-w-2xl text-lg leading-8 text-muted">
-            Explore live projects that demonstrate my front-end work with
-            Next.js and Angular, including real production websites and polished
-            user experiences.
+            Explore live projects that demonstrate how I use Next.js and Angular
+            to shape real products, connect user-facing experiences to
+            application data, and turn complex requirements into polished,
+            responsive interfaces.
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-2">

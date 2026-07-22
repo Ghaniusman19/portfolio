@@ -55,11 +55,22 @@ body {
 body {
   margin: 0;
   background-color: var(--background);
-  background-image: radial-gradient(circle at top left, rgba(79, 70, 229, 0.15), transparent 30%),
-    radial-gradient(circle at bottom right, rgba(236, 72, 153, 0.14), transparent 28%);
+  background-image:
+    radial-gradient(
+      circle at top left,
+      rgba(79, 70, 229, 0.15),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(236, 72, 153, 0.14),
+      transparent 28%
+    );
   color: var(--foreground);
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 body::before {
@@ -67,8 +78,13 @@ body::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background-image: radial-gradient(circle at 20% 10%, rgba(79, 70, 229, 0.1), transparent 24%),
-    radial-gradient(circle at 80% 85%, rgba(236, 72, 153, 0.08), transparent 22%);
+  background-image:
+    radial-gradient(circle at 20% 10%, rgba(79, 70, 229, 0.1), transparent 24%),
+    radial-gradient(
+      circle at 80% 85%,
+      rgba(236, 72, 153, 0.08),
+      transparent 22%
+    );
 }
 
 ::selection {
@@ -78,4 +94,90 @@ body::before {
 
 a {
   color: inherit;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drift-in {
+  from {
+    opacity: 0;
+    transform: translateX(24px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes soft-pulse {
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.motion-rise-in {
+  animation: rise-in 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.motion-drift-in {
+  animation: drift-in 800ms cubic-bezier(0.22, 1, 0.36, 1) 120ms both;
+}
+
+.motion-delay-1 {
+  animation-delay: 120ms;
+}
+
+.motion-delay-2 {
+  animation-delay: 220ms;
+}
+
+.motion-delay-3 {
+  animation-delay: 320ms;
+}
+
+.motion-delay-4 {
+  animation-delay: 420ms;
+}
+
+.motion-glow {
+  animation: soft-pulse 3.5s ease-in-out infinite;
+}
+
+.interactive-lift {
+  transition:
+    transform 250ms ease,
+    box-shadow 250ms ease,
+    border-color 250ms ease,
+    background-color 250ms ease;
+}
+
+.interactive-lift:hover {
+  transform: translateY(-4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

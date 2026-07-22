@@ -18,6 +18,23 @@ const messagesFilePath = process.env.VERCEL
   ? path.join("/tmp", "contact-messages.json")
   : path.join(process.cwd(), "data", "contact-messages.json");
 
+const maxNameLength = 100;
+const maxMessageLength = 5000;
+
+function escapeHtml(value: string) {
+  return value.replace(
+    /[&<>'"]/g,
+    (character) =>
+      ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        "'": "&#39;",
+        '"': "&quot;",
+      })[character] ?? character,
+  );
+}
+
 async function readMessages(): Promise<ContactMessage[]> {
   try {
     const file = await fs.readFile(messagesFilePath, "utf8");
@@ -54,6 +71,26 @@ export async function POST(request: Request) {
       );
     }
 
+    if (trimmedName.length > maxNameLength) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: `Name must be ${maxNameLength} characters or fewer.`,
+        },
+        { status: 400 },
+      );
+    }
+
+    if (trimmedMessage.length > maxMessageLength) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: `Message must be ${maxMessageLength} characters or fewer.`,
+        },
+        { status: 400 },
+      );
+    }
+
     const messages = await readMessages();
     const entry: ContactMessage = {
       id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
@@ -79,7 +116,7 @@ export async function POST(request: Request) {
       from: fromEmail,
       to: [toEmail],
       subject: `New portfolio message from ${trimmedName}`,
-      html: `<p><strong>Name:</strong> ${trimmedName}</p><p><strong>Message:</strong><br />${trimmedMessage.replace(/\n/g, "<br />")}</p>`,
+      html: `<p><strong>Name:</strong> ${escapeHtml(trimmedName)}</p><p><strong>Message:</strong><br />${escapeHtml(trimmedMessage).replace(/\n/g, "<br />")}</p>`,
     });
 
     return NextResponse.json(
@@ -96,9 +133,4 @@ export async function POST(request: Request) {
       { status: 500 },
     );
   }
-}
-
-export async function GET() {
-  const messages = await readMessages();
-  return NextResponse.json(messages);
 }
