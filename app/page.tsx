@@ -1,4 +1,4 @@
-import HeroScene from "@/components/HeroScene";
+import Image from "next/image";
 import TechStack from "@/components/TechStack";
 
 export default function HomePage() {
@@ -28,20 +28,20 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-4 motion-rise-in motion-delay-3">
               <a
                 href="/projects"
-                className="interactive-lift inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-3.5 text-sm font-semibold text-white shadow-[0_20px_40px_rgba(15,23,42,0.18)] transition hover:bg-slate-700 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-white"
+                className="interactive-lift inline-flex items-center justify-center rounded-full bg-indigo-600 px-6 py-3.5 text-sm font-semibold text-white shadow-[0_20px_40px_rgba(79,70,229,0.25)] transition hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-400"
               >
                 View Projects
               </a>
               <a
-                href="/resume.pdf"
+                href="/Muhammad-Usman-Ghani-resume.pdf"
                 download
-                className="interactive-lift inline-flex items-center justify-center rounded-full border border-slate-300 bg-white/70 px-6 py-3.5 text-sm font-semibold text-slate-800 backdrop-blur-xl hover:border-slate-400 hover:bg-white dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-100 dark:hover:border-slate-500 dark:hover:bg-slate-800/80"
+                className="interactive-lift inline-flex items-center justify-center rounded-full border-2 border-indigo-600 bg-white/70 px-6 py-3.5 text-sm font-semibold text-indigo-600 backdrop-blur-xl hover:bg-indigo-50 dark:border-indigo-400 dark:bg-slate-900/70 dark:text-indigo-300 dark:hover:bg-slate-800/80"
               >
                 Download Resume
               </a>
               <a
                 href="/contact"
-                className="interactive-lift inline-flex items-center justify-center rounded-full border border-slate-300 bg-white/70 px-6 py-3.5 text-sm font-semibold text-slate-800 backdrop-blur-xl hover:border-slate-400 hover:bg-white dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-100 dark:hover:border-slate-500 dark:hover:bg-slate-800/80"
+                className="interactive-lift inline-flex items-center justify-center rounded-full border-2 border-slate-400 bg-white/70 px-6 py-3.5 text-sm font-semibold text-slate-800 backdrop-blur-xl hover:bg-slate-100 dark:border-slate-500 dark:bg-slate-900/70 dark:text-slate-200 dark:hover:bg-slate-800/80"
               >
                 Contact Me
               </a>
@@ -60,7 +60,15 @@ export default function HomePage() {
 
           <div className="motion-drift-in relative">
             <div className="absolute -inset-6 rounded-[40px] bg-gradient-to-br from-slate-400/25 via-slate-200/20 to-slate-500/25 blur-3xl dark:from-slate-500/20 dark:via-slate-700/20 dark:to-slate-400/15" />
-            <HeroScene />
+            <div className="relative h-[420px] w-full overflow-hidden rounded-[30px] border border-slate-300/15 bg-slate-950/80 shadow-[0_35px_80px_rgba(15,23,42,0.4)] backdrop-blur-sm">
+              <Image
+                src="/usman-ghani-image.png"
+                alt="Muhammad Usman Ghani"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
           </div>
         </div>
 

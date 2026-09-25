@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function AboutPage() {
   return (
     <section className="bg-surface-muted py-16 dark:bg-background sm:py-20">
@@ -7,9 +9,20 @@ export default function AboutPage() {
             <span className="inline-flex rounded-full bg-slate-200 px-4 py-1 text-sm font-semibold text-slate-700 dark:bg-slate-800 dark:text-slate-200">
               About Me
             </span>
-            <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-              Muhammad Usman Ghani
-            </h1>
+            <div className="flex items-center gap-6">
+              <div className="relative h-32 w-32 shrink-0 overflow-hidden rounded-3xl border-2 border-border/80 shadow-[0_20px_40px_rgba(15,23,42,0.15)] dark:border-border/40 dark:shadow-[0_20px_40px_rgba(99,102,241,0.25)]">
+                <Image
+                  src="/usman-ghani-image.png"
+                  alt="Muhammad Usman Ghani"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+                Muhammad Usman Ghani
+              </h1>
+            </div>
             <p className="max-w-2xl text-lg leading-8 text-muted">
               Software Engineering graduate and Full Stack Developer passionate
               about building modern, scalable, and user-focused web

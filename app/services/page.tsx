@@ -131,7 +131,7 @@ export default function ServicesPage() {
           </p>
           <Link
             href="/contact"
-            className="interactive-lift inline-flex items-center justify-center rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(15,23,42,0.18)] hover:bg-slate-700 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-white"
+            className="interactive-lift inline-flex items-center justify-center rounded-full bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(79,70,229,0.25)] hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-400"
           >
             Discuss your idea
           </Link>
@@ -214,7 +214,7 @@ export default function ServicesPage() {
           </p>
           <Link
             href="/contact"
-            className="interactive-lift mt-7 inline-flex items-center justify-center rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(15,23,42,0.18)] hover:bg-slate-700 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-white"
+            className="interactive-lift mt-7 inline-flex items-center justify-center rounded-full bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(79,70,229,0.25)] hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-400"
           >
             Discuss your idea
           </Link>
