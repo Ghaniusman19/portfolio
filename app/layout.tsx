@@ -44,7 +44,8 @@ export const metadata: Metadata = {
     siteName: "Muhammad Usman Ghani Portfolio",
   },
   icons: {
-    icon: "/favicon.png",
+    icon: "/usman-ghani-image-favicon.png",
+    apple: "/usman-ghani-image-favicon.png",
   },
 };
 
@@ -58,6 +59,9 @@ export default function RootLayout({
       lang="en"
       className={`${manrope.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="icon" href="/favicon.png" />
+      </head>
       <body className="min-h-full flex flex-col">
         <ParticleBackground />
         <a
