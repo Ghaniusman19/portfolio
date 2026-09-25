@@ -87,7 +87,7 @@ export default function ContactPage() {
                   autoComplete="name"
                   maxLength={100}
                   required
-                  className="w-full rounded-2xl border border-slate-200 bg-slate-100 px-4 py-3 text-sm outline-none transition focus:border-slate-500 focus:ring-2 focus:ring-slate-200 dark:border-slate-700 dark:bg-slate-950/60 dark:focus:border-slate-400 dark:focus:ring-slate-700/50"
+                  className="w-full rounded-2xl border border-slate-200 bg-slate-100 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-slate-500 focus:ring-2 focus:ring-slate-200 dark:border-slate-700 dark:bg-slate-950/60 dark:text-slate-100 dark:focus:border-slate-400 dark:focus:ring-slate-700/50"
                 />
               </div>
               <div>
@@ -105,7 +105,7 @@ export default function ContactPage() {
                   placeholder="Tell me about your project..."
                   maxLength={5000}
                   required
-                  className="w-full rounded-2xl border border-slate-200 bg-slate-100 px-4 py-3 text-sm outline-none transition focus:border-slate-500 focus:ring-2 focus:ring-slate-200 dark:border-slate-700 dark:bg-slate-950/60 dark:focus:border-slate-400 dark:focus:ring-slate-700/50"
+                  className="w-full rounded-2xl border border-slate-200 bg-slate-100 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-slate-500 focus:ring-2 focus:ring-slate-200 dark:border-slate-700 dark:bg-slate-950/60 dark:text-slate-100 dark:focus:border-slate-400 dark:focus:ring-slate-700/50"
                 />
               </div>
               <button
@@ -151,7 +151,7 @@ export default function ContactPage() {
                   LinkedIn
                 </a>
                 <a
-                  href="https://github.com/ghaniusman19"
+                  href="https://www.linkedin.com/in/muhammadusman-ghani"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-surface-muted px-4 py-2 text-sm font-semibold text-foreground transition hover:border-border hover:bg-surface dark:bg-surface-muted"

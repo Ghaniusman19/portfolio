@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const projects = [
   {
     title: "FiveLumens.ai",
@@ -47,9 +49,11 @@ export default function ProjectsPage() {
               className="interactive-lift group rounded-4xl border border-border/80 bg-surface overflow-hidden shadow-[0_20px_60px_rgba(15,23,42,0.06)] backdrop-blur-xl dark:border-border/40 dark:bg-surface dark:shadow-[0_20px_60px_rgba(99,102,241,0.14)]"
             >
               <div className="relative overflow-hidden bg-surface-muted">
-                <img
+                <Image
                   src={`/projects/${project.image}`}
                   alt={project.title}
+                  width={800}
+                  height={400}
                   className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-surface/80 to-transparent" />

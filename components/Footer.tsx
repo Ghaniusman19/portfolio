@@ -22,7 +22,7 @@ export default function Footer() {
               LinkedIn
             </a>
             <a
-              href="https://github.com/ghaniusman19"
+              href="https://www.linkedin.com/in/muhammadusman-ghani/"
               target="_blank"
               rel="noreferrer"
               className="transition-colors hover:text-slate-900 dark:hover:text-white"
