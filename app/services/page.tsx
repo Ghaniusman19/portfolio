@@ -110,7 +110,7 @@ export default function ServicesPage() {
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-6 motion-rise-in">
           <div className="flex flex-wrap items-center gap-3">
-            <span className="inline-flex rounded-full bg-primary/10 px-4 py-1 text-sm font-semibold text-primary">
+            <span className="inline-flex rounded-full bg-slate-200 px-4 py-1 text-sm font-semibold text-slate-700 dark:bg-slate-800 dark:text-slate-200">
               How I can help
             </span>
             <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/25 bg-emerald-500/10 px-4 py-1 text-sm font-medium text-emerald-700 dark:text-emerald-300">
@@ -131,7 +131,7 @@ export default function ServicesPage() {
           </p>
           <Link
             href="/contact"
-            className="interactive-lift inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-primary/20 hover:bg-indigo-600"
+            className="interactive-lift inline-flex items-center justify-center rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(15,23,42,0.18)] hover:bg-slate-700 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-white"
           >
             Discuss your idea
           </Link>
@@ -143,7 +143,7 @@ export default function ServicesPage() {
               key={service.title}
               className={`interactive-lift motion-rise-in motion-delay-${(index % 4) + 1} flex h-full flex-col rounded-[2rem] border border-border/80 bg-surface p-6 shadow-[0_20px_60px_rgba(79,70,229,0.06)] dark:border-border/40 dark:bg-surface dark:shadow-[0_20px_60px_rgba(99,102,241,0.14)]`}
             >
-              <span className="font-mono text-sm font-semibold text-primary">
+              <span className="font-mono text-sm font-semibold text-slate-600 dark:text-slate-300">
                 {service.number}
               </span>
               <h2 className="mt-8 text-2xl font-semibold text-foreground">
@@ -156,7 +156,7 @@ export default function ServicesPage() {
                 {service.deliverables.map((deliverable) => (
                   <li key={deliverable} className="flex gap-3">
                     <span
-                      className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary"
+                      className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-500"
                       aria-hidden="true"
                     />
                     <span>{deliverable}</span>
@@ -169,7 +169,7 @@ export default function ServicesPage() {
 
         <div className="mt-20 grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <div className="space-y-4">
-            <span className="text-sm font-semibold uppercase tracking-[0.24em] text-primary">
+            <span className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-600 dark:text-slate-300">
               My process
             </span>
             <h2 className="text-3xl font-semibold text-foreground sm:text-4xl">
@@ -187,7 +187,7 @@ export default function ServicesPage() {
                 key={step.title}
                 className="rounded-3xl border border-border/70 bg-surface p-5 shadow-sm dark:bg-surface-muted"
               >
-                <span className="font-mono text-sm font-semibold text-primary">
+                <span className="font-mono text-sm font-semibold text-slate-600 dark:text-slate-300">
                   {step.number}
                 </span>
                 <h3 className="mt-5 text-lg font-semibold text-foreground">
@@ -201,8 +201,8 @@ export default function ServicesPage() {
           </div>
         </div>
 
-        <div className="mt-20 rounded-[2rem] border border-primary/20 bg-primary/5 p-8 text-center dark:bg-primary/10 sm:p-12">
-          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-primary">
+        <div className="mt-20 rounded-[2rem] border border-slate-200 bg-slate-100/80 p-8 text-center dark:border-slate-700 dark:bg-slate-900/80 sm:p-12">
+          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-600 dark:text-slate-300">
             Have a project in mind?
           </p>
           <h2 className="mx-auto mt-4 max-w-2xl text-3xl font-semibold text-foreground sm:text-4xl">
@@ -214,7 +214,7 @@ export default function ServicesPage() {
           </p>
           <Link
             href="/contact"
-            className="interactive-lift mt-7 inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-primary/20 hover:bg-indigo-600"
+            className="interactive-lift mt-7 inline-flex items-center justify-center rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(15,23,42,0.18)] hover:bg-slate-700 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-white"
           >
             Discuss your idea
           </Link>

@@ -1,42 +1,47 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Manrope, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ParticleBackground from "@/components/ParticleBackground";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: "--font-ibm-plex-mono",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
   title: {
-    default: "Usman Ghani | Front-End Developer",
-    template: "%s | Usman Ghani",
+    default: "Muhammad Usman Ghani | Software Engineer",
+    template: "%s | Muhammad Usman Ghani",
   },
   description:
-    "Usman Ghani is a front-end developer building responsive business websites and education platforms with React, Next.js, Angular, and API integrations.",
+    "Portfolio of Muhammad Usman Ghani, a Software Engineer specializing in React, Next.js, TypeScript, JavaScript, Angular, Node.js and modern web application development.",
   keywords: [
-    "Usman Ghani",
-    "front-end developer",
+    "Muhammad Usman Ghani",
+    "Software Engineer",
     "React developer",
     "Next.js developer",
+    "TypeScript developer",
     "Angular developer",
-    "responsive web development",
+    "Node.js developer",
+    "full-stack developer",
+    "web development",
   ],
-  authors: [{ name: "Usman Ghani" }],
-  creator: "Usman Ghani",
+  authors: [{ name: "Muhammad Usman Ghani" }],
+  creator: "Muhammad Usman Ghani",
   openGraph: {
     type: "website",
-    title: "Usman Ghani | Front-End Developer",
+    title: "Muhammad Usman Ghani | Software Engineer",
     description:
-      "Responsive business websites and education platforms built with React, Next.js, Angular, and modern front-end practices.",
-    siteName: "Usman Ghani Portfolio",
+      "Software Engineer building scalable web applications with React, Next.js, TypeScript, Angular, and Node.js.",
+    siteName: "Muhammad Usman Ghani Portfolio",
   },
   icons: {
     icon: "/favicon.png",
@@ -51,17 +56,18 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${manrope.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <ParticleBackground />
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-primary focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-slate-900 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white dark:focus:bg-slate-100 dark:focus:text-slate-900"
         >
           Skip to main content
         </a>
         <Header />
-        <main id="main-content" className="flex-1">
+        <main id="main-content" className="relative z-10 flex-1">
           {children}
         </main>
         <Footer />

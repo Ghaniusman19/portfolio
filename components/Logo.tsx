@@ -3,7 +3,7 @@ export default function Logo({ size = 36 }: { size?: number }) {
     <div className="flex items-center gap-2">
       <div
         style={{ width: size, height: size }}
-        className="rounded-full bg-gradient-to-br from-indigo-500 to-pink-500 flex items-center justify-center text-white font-bold"
+        className="flex items-center justify-center rounded-full bg-gradient-to-br from-slate-800 to-slate-500 font-bold text-white"
       >
         UG
       </div>
