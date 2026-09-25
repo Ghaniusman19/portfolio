@@ -13,7 +13,7 @@ export default function Footer() {
           </div>
           <div className="flex flex-wrap gap-4">
             <a
-              href="https://linkedin.com/in/ghaniusman19"
+              href="https://www.linkedin.com/in/muhammadusman-ghani/"
               target="_blank"
               rel="noreferrer"
               className="transition-colors hover:text-slate-900 dark:hover:text-white"
@@ -22,7 +22,7 @@ export default function Footer() {
               LinkedIn
             </a>
             <a
-              href="https://www.linkedin.com/in/muhammadusman-ghani/"
+              href="https://github.com/ghaniusman19"
               target="_blank"
               rel="noreferrer"
               className="transition-colors hover:text-slate-900 dark:hover:text-white"

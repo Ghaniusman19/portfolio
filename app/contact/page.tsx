@@ -136,7 +136,7 @@ export default function ContactPage() {
               </p>
               <div className="mt-4 flex flex-wrap gap-4">
                 <a
-                  href="https://linkedin.com/in/ghaniusman19"
+                  href="https://www.linkedin.com/in/muhammadusman-ghani"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-surface-muted px-4 py-2 text-sm font-semibold text-foreground transition hover:border-border hover:bg-surface dark:bg-surface-muted"
@@ -151,7 +151,7 @@ export default function ContactPage() {
                   LinkedIn
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/muhammadusman-ghani"
+                  href="https://github.com/ghaniusman19"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-surface-muted px-4 py-2 text-sm font-semibold text-foreground transition hover:border-border hover:bg-surface dark:bg-surface-muted"
